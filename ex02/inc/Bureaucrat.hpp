@@ -6,14 +6,14 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 19:24:52 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/04/15 10:06:31 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/05/27 21:58:28 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
-# include "Form.hpp"
+# include "AForm.hpp"
 
 class Bureaucrat{
 	private:
@@ -29,7 +29,7 @@ class Bureaucrat{
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
-		void		signForm(Form& form);
+		void		signForm(AForm& form);
 		void		executeForm(AForm const & form);
 		class GradeTooHighException : public std::exception{
 			public:

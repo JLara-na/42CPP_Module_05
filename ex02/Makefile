@@ -63,7 +63,10 @@ CUSTOM_4		=		\033[38:5:101m
 #---------SRC OBJ DEP INC---------
 SRC_FILES		=		main					\
 						Bureaucrat				\
-						Form					\
+						AForm					\
+						PresidentialPardonForm					\
+						RobotomyRequestForm					\
+						ShrubberyCreationForm					\
 
 SRC 			= 		$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 			= 		$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))

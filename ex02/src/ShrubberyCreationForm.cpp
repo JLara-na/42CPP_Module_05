@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:19:50 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/04/15 13:55:51 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/05/27 22:05:54 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ ShrubberyCreationForm&		ShrubberyCreationForm::operator=(const ShrubberyCreation
 }
 
 void		ShrubberyCreationForm::execute(Bureaucrat const &executor) const {
-	std::string	filename = this->_target + "_shrubbery";
+	std::string	filename = executor.getName() + "_shrubbery";
 	std::ofstream outfile(filename.c_str());
 
 	if (outfile.is_open()){
