@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:19:58 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/06/20 13:46:34 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/06/20 13:51:07 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 }
 
 void		PresidentialPardonForm::execute(Bureaucrat const &executor) const{
-	std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+	std::cout << executor.getName() << ": " << this->_target << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:20:04 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/06/20 13:47:17 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/06/20 13:52:09 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void		RobotomyRequestForm::execute(Bureaucrat const &executor) const{
 
     gettimeofday(&currentTime, NULL);
 	ms = currentTime.tv_usec;
-	std::cout << "Makes some drilling noises!" << std::endl;
+	std::cout << executor.getName() << ": " << "Makes some drilling noises!" << std::endl;
     if (ms % 2 == 0)
         std::cout << this->_target << " has been robotomized" << std::endl;
     else
