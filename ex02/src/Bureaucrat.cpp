@@ -6,7 +6,7 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 19:24:47 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/05/27 22:08:47 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/06/20 13:03:41 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void		Bureaucrat::decrementGrade(){
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
+	// std::cout << "Bureaucrat = operator called!" << std::endl;
 	if (this != &other){
 		this->_grade = other.getGrade();
 	}
@@ -99,8 +100,8 @@ void	Bureaucrat::executeForm(AForm const &form)
 		form.execute(*this);
 		std::cout << getName() << ": executed " << form.getName() << std::endl;
 	}
-	catch(std::exception& e)
+	catch(std::exception& exception)
 	{
-		std::cerr << e.what() << std::endl;
+		std::cerr << exception.what() << std::endl;
 	}
 }

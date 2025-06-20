@@ -6,13 +6,14 @@
 /*   By: jlara-na <jlara-na@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:07:42 by jlara-na          #+#    #+#             */
-/*   Updated: 2025/04/15 10:16:54 by jlara-na         ###   ########.fr       */
+/*   Updated: 2025/06/20 13:36:46 by jlara-na         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include "AForm.hpp"
+# include <sys/time.h>
 
 class RobotomyRequestForm : public AForm
 {

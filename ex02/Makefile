@@ -1,6 +1,6 @@
 #-----------EXECUTABLE-----------
 
-NAME			:=		ex01.exe
+NAME			:=		ex02.exe
 #-----------DIR PATHS------------
 
 SRC_DIR			:=		src/
@@ -84,7 +84,7 @@ all:
 $(NAME):	$(OBJ)
 			@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 			@echo "$(CLEAN_LINE)$(CUSTOM_4)FLAGS USED	$(CUSTOM_1)$(CXX)$(CXXFLAGS)$(DEF_COLOR)"
-			@echo "$(CLEAN_LINE)$(CUSTOM_4)ex01		$(GREEN)✔ COMPILED CORRECTLY$(DEF_COLOR)"
+			@echo "$(CLEAN_LINE)$(CUSTOM_4)ex02		$(GREEN)✔ COMPILED CORRECTLY$(DEF_COLOR)"
 
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp $(INCS) | $(OBJF)
@@ -95,6 +95,7 @@ $(OBJF):
 
 clean:
 			@$(RM) -rf $(OBJ_DIR)
+			@$(RM) -rf *_shrubbery
 			@echo "$(CUSTOM_4)OBJ FILES	$(GREEN)✔ CLEANED$(DEF_COLOR)"
 
 fclean:		clean
